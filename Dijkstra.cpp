@@ -20,9 +20,14 @@ int main() {
     while (fin >> previous[k]) { //Считывание перестановки
         ++k;
     }
+    fin.close();
     //Следующая перестановка
     int *next = new int[arrSize] { 0 };
-    fin.close();
+    //Здесь будет алгоритм
+    fin.open("output.txt");
+    for (int i{ 0 }; i < arrSize; ++i) {
+        fin << next[i] << " ";
+    }
     return 0;
 }
  
